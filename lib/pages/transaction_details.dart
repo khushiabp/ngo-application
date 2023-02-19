@@ -89,7 +89,7 @@ class _PaymentDetailsPageState extends State<PaymentDetailsPage> {
                         Text(
                           NumberFormat.currency(
                             symbol: '₹',
-                          ).format(double.parse(payment['amount'].toString())),
+                          ).format(double.parse((payment['amount']/100).toString())),
                         ),
                       ),
                       DataCell(
