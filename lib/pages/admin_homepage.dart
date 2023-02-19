@@ -5,6 +5,7 @@ import 'package:ngo_app/pages/admin_profile.dart';
 import 'package:ngo_app/pages/admin_projects.dart';
 import 'package:ngo_app/pages/admin_search.dart';
 import 'package:ngo_app/pages/admin_volunteers.dart';
+import 'package:ngo_app/pages/transaction_details.dart';
 
 class AdminHomePage extends StatefulWidget {
   const AdminHomePage({super.key});
@@ -34,8 +35,8 @@ class _AdminHomePageState extends State<AdminHomePage> {
             backgroundColor: Color(0xFF0B5D0B),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Search",
+            icon: Icon(Icons.payments),
+            label: "Transaction history",
             backgroundColor: Color(0xFF0B5D0B),
           ),
           BottomNavigationBarItem(
@@ -54,6 +55,12 @@ class _AdminHomePageState extends State<AdminHomePage> {
           setState(() {
             _currentIndex = index;
           });
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PaymentDetailsPage(apiKey: 'rzp_test_1SzcPrcZbeMtiS', apiSecret: 'NTzmUZAjCwWcy0RS6s94Jxd6')),
+            );
+          }
         },
       ),
     );
