@@ -64,6 +64,12 @@ dependencies:
   http:
 
   url_launcher: ^6.1.9
+  
+   flutter_form_builder: ^7.8.0
+  flutter_datetime_picker: ^1.5.1
+  flutter_sms: ^2.3.3
+  flutter_email_sender: ^5.2.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
